@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <header class="header_section">
+        <div class="header flex">
+            <a href="/">
+                <h1 class="logo">Users-Diary</h1>
+            </a>
+            <a class="add_user_btn" href="/users/new">Add user</a>
+        </div>
+    </header>
+
+    <section>
+        <div class="container   ">
+            <h2 class="list_heading">List of users</h2>
+
+            <section class="">
+                <% users.forEach(user=> { %>
+                    <section class="">
+                        <section class="card flex-30">
+                            <h1 class="name">
+                                <%= `name : ${user.name}`%>
+                            </h1>
+                            <h2 class="email">
+                                <%= `email : ${user.email}`%>
+                            </h2>
+                            <h3 class="age">
+                                <%= `age : ${user.age}`%>
+                            </h3>
+                            <div class="btn">
+                                <a class="add_user_btn show_user_btn" href="/users/<%= user._id%>">show user</a>
+                            </div>
+                        </section>
+                    </section>
+                    <% }) %>
+            </section>
+        </div>
+    </section>
+</body>
+
+</html>
