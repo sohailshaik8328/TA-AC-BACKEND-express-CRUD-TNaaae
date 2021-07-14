@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header_section">
+        <div class="header flex">
+            <a href="/">
+                <h1 class="logo">Users-Diary</h1>
+            </a>
+            <a class="add_user_btn" href="/users">Back</a>
+        </div>
+    </header>
+
+    <section>
+        <div class="container   ">
+            <h2 class="list_heading">Users</h2>
+
+            <section class="">
+                <section class="">
+                    <section class="card">
+                        <div>
+                            <h1 class="name">
+                                <%= `name : ${user.name}`%>
+                            </h1>
+                            <h2 class="email">
+                                <%= `email : ${user.email}`%>
+                            </h2>
+                            <h3 class="age">
+                                <%= `age : ${user.age}`%>
+                            </h3>
+                            <p class="bio">
+                                <%= `Bio : ${user.bio}`%>
+                            </p>
+                            <p class="hobbies">
+                                <%= `Hobbies : ${user.hobbies}`%>
+                            </p>
+
+                        </div>
+
+                        <div class="btns">
+                            <a class="add_user_btn edit_btn" href="/users/<%= user.id%>/edit">Edit</a>
+                            <a class="add_user_btn delete_btn" href="/users/<%= user.id%>/delete">Delete</a>
+                        </div>
+
+                    </section>
+                </section>
+            </section>
+        </div>
+    </section>
+    </section>
+</body>
+
+</html>
