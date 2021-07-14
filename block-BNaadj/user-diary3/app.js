@@ -6,7 +6,7 @@ let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 
 //mongoose connector to database
-mongoose.connect("mongodb://localhost/userStore", {useNewUrlParser : true, useUnifiedTopology : true}, (err) => {
+mongoose.connect("mongodb://localhost/user-diary3", {useNewUrlParser : true, useUnifiedTopology : true}, (err) => {
     console.log("Connected", err ? false : true);
 })
 
